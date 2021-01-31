@@ -1,0 +1,2 @@
+#!/bin/bash
+catiacta > tail -n 1

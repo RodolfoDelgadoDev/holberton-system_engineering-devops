@@ -1,2 +1,2 @@
 #!/bin/bash
-sort koka | uniq -u koka
+sort list | uniq -u 

@@ -1,2 +1,3 @@
 #!/bin/bash
-sort list | uniq -u 
+sort list | uniq -u list
+

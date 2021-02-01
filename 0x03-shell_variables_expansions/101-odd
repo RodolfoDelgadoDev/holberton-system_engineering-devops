@@ -1,0 +1,2 @@
+#!/bin/bash
+perl -pe 'BEGIN{open($e,">even_lines");open($o,">odd_lines")} $. % 2 ?select $o:select $e;'

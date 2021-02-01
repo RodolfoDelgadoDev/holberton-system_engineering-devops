@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -pe 'BEGIN{open($e,">even_lines");open($o,">odd_lines")} $. % 2 ?select $o:select $e;' | ls -l
+perl -lne 'print if $. % 2 == 1' infile > outfile

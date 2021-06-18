@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #Check if holbertonschool file exsist
-if test -e "/holbertonschool"
+if test -e "holbertonschool"
 then
     echo "holbertonschool file exists"
-    if test -s "/holbertonschool"
+    if test -s "holbertonschool"
     then
 	echo "holbertonschool file is not empty"
-	if test -f "/holbertonschool"
+	if test -f "holbertonschool"
 	then
 	    echo "holbertonschool is a regular file"
 	    fi

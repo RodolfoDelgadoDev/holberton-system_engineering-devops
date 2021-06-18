@@ -6,12 +6,12 @@ then
     if test -s "holbertonschool"
     then
 	echo "holbertonschool file is not empty"
-	if test -f "holbertonschool"
-	then
-	    echo "holbertonschool is a regular file"
-	    fi
     else
 	echo "holbertonschool file is empty"
+    fi
+    if test -f "holbertonschool"
+    then
+        echo "holbertonschool is a regular file"
     fi
 else
     echo "holbertonschool file does not exist"

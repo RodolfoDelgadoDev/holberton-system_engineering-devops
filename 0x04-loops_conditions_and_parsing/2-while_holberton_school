@@ -1,4 +1,5 @@
 #!/bin/bash
+#Prints 10 times HolbertonSchool
 i=1
 while [ $i -le 10 ]
 do

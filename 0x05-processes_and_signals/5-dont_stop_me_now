@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Kill ex 4.
+kill

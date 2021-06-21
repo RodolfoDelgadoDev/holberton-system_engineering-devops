@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #Kill ex 4.
-kill "$4-to_infinity_and_beyond"
+p=((pgrep -f 4-to_infinity_and_beyond))
+kill "$p"

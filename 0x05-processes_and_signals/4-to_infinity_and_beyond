@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #Loop that displays in the screen a iconic phrase
-while [ true ]
+c=0
+while ((c<1))
 do
 echo "To infinity and beyond"
 sleep 2

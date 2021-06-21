@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Kill ex 7.
+pkill 7-highlander

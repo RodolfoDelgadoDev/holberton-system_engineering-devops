@@ -1,0 +1,5 @@
+## Client configuration file ##
+Host 2786-web-01
+     HostName 34.138.59.198
+     User ubuntu
+     IdentityFile ~/.ssh/holberton

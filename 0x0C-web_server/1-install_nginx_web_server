@@ -2,5 +2,5 @@
 # script that configures a new Ubuntu machine
 sudo apt-get update -y
 sudo apt-get install nginx -y
-sudo service nginx restart
 echo "Holberton School" > /var/www/html/index.html
+sudo service nginx restart

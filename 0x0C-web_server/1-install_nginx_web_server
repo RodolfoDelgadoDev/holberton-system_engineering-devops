@@ -2,4 +2,4 @@
 # script that configures a new Ubuntu machine
 sudo apt-get update -y
 sudo apt-get install nginx -y
-sudo service nginx restart -y
+sudo service nginx restart

@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # script that configures a new Ubuntu machine
+
 sudo apt-get update -y
-sudo apt-get install nginx -y
-echo "Holberton School" > /var/www/html/index.html
-sudo sed -i '/server_name _;/a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-sudo sed -i '/try_files/a error_page 404 /custom_404.html;' /etc/nginx/sites-available/default
+sudo apt-get install -y nginx
+echo 'Holberton School' > /var/www/html/index.html
+sed -i "/server_name _/a \        rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n" /etc/nginx/sites-available/default
+sed -i "/location/a \                error_page 404 /code_404.html;\n" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /var/www/html/code_404.html
 sudo service nginx restart

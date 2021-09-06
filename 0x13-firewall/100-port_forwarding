@@ -1,5 +1,6 @@
 sudo ufw allow 8080/tcp
-sed -i '1i -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080' /etc/ufw/before.rules
-sed -i '1i :PREROUTING ACCEPT [0:0]' /etc/ufw/before.rules
-sed -i '1i *nat' /etc/ufw/before.rules
+sed -i '1i COMMIT\n' /etc/ufw/before.rules
+sed -i '1i -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080\n' /etc/ufw/before.rules
+sed -i '1i :PREROUTING ACCEPT [0:0]\n' /etc/ufw/before.rules
+sed -i '1i *nat\n' /etc/ufw/before.rules
 sudo ufw enable

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# generates a MySQL dump
+# generate mysql dump
 mysqldump -u root -p"$1" --all-databases > backup.sql
 hoy=$(date +"%d-%m-%Y")
 tar -cvzf ${hoy}.tar.gz ./backup.sql

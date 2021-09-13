@@ -6,6 +6,7 @@ import sys
 
 
 if __name__ == "__main__":
+    """ starts """
     user = requests.get('https://jsonplaceholder.typicode.com/users?id={}'
                         .format(sys.argv[1]))
     tasks = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'

@@ -17,7 +17,7 @@ if __name__ == "__main__":
         uid = "{}".format(sys.argv[1])
         lista = []
         for tasks in tasks_data:
-                di=OrderedDict()
+                di = OrderedDict()
                 task = '{}'.format(tasks['title'])
                 username = '{}'.format(user_data[0]['username'])
                 com = '{}'.format(tasks['completed'])

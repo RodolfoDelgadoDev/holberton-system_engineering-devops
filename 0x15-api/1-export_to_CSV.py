@@ -9,11 +9,11 @@ import sys
 if __name__ == "__main__":
         user = requests.get('https://jsonplaceholder.typicode.com/users?id={}'
                             .format(sys.argv[1]))
-        tasks = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
-                             .format(sys.argv[1]))
+        t = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
+                         .format(sys.argv[1]))
         user_data = user.json()
-        tasks_data = tasks.json()
-        
+        tasks_data = t.json()
+
         filename = '{}.csv'.format(sys.argv[1])
         with open(filename, 'w+', encoding='utf-8') as f:
             writer = csv.writer(f, quoting=csv.QUOTE_ALL)

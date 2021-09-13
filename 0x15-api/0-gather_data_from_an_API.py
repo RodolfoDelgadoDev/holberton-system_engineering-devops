@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """given employee ID, returns information about his/her TODO list progress """
-import requests
 import json
+import requests
 import sys
 
 
 if __name__ == "__main__":
-    """ starts """
     user = requests.get('https://jsonplaceholder.typicode.com/users?id={}'
                         .format(sys.argv[1]))
     tasks = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'

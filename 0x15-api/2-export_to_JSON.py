@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Python script to export data in the CSV format """
+from collections import OrderedDict
 import json
 import requests
 import sys
@@ -16,10 +17,14 @@ if __name__ == "__main__":
         uid = "{}".format(sys.argv[1])
         lista = []
         for tasks in tasks_data:
+                di=OrderedDict()
                 task = '{}'.format(tasks['title'])
                 username = '{}'.format(user_data[0]['username'])
                 com = '{}'.format(tasks['completed'])
-                di = {'task': task, 'completed': com, 'username': username}
+                di['task'] = task
+                di['completed'] = com
+                di['username'] = username
+                dict(di)
                 lista.append(di)
         dic = {uid: lista}
         with open(filename, 'w+', encoding='utf-8') as f:

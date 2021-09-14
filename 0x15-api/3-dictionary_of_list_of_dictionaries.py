@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Python script to export data in the CSV format """
+""" Python script to export data in the JSON format """
 import json
 import requests
 import sys
@@ -12,10 +12,10 @@ if __name__ == "__main__":
         dic = {}
         for user in user_data:
                 u = user['id']
-                te = "https://jsonplaceholder.typicode.com/todos?userId={}?"\
-                     .format(u)
-                t = requests.get(te)
-                tasks_data = t.json()
+                tex = "https://jsonplaceholder.typicode.com/todos?userId={}"\
+                      .format(u)
+                te = requests.get(tex)
+                tasks_data = te.json()
                 for tasks in tasks_data:
                         t = '{}'.format(tasks.get('title'))
                         username = '{}'.format(user_data[u - 1]['username'])

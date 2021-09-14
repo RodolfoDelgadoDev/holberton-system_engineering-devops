@@ -12,9 +12,9 @@ if __name__ == "__main__":
         dic = {}
         for user in user_data:
                 u = user['id']
-                text = 'https://jsonplaceholder.typicode.com/todos?userId={}?'
-                .format(u)
-                t = requests.get(text)
+                te = "https://jsonplaceholder.typicode.com/todos?userId={}?"\
+                     .format(u)
+                t = requests.get(te)
                 tasks_data = t.json()
                 for tasks in tasks_data:
                         t = '{}'.format(tasks.get('title'))

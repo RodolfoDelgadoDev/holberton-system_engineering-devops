@@ -10,13 +10,13 @@ if __name__ == "__main__":
         user_data = user.json()
         dic = {}
         for user in user_data:
+                lista = []
                 u = user['id']
                 tex = "https://jsonplaceholder.typicode.com/todos?userId={}"\
                       .format(u)
                 te = requests.get(tex)
                 tasks_data = te.json()
                 for tasks in tasks_data:
-                        lista = []
                         t = '{}'.format(tasks.get('title'))
                         username = '{}'.format(user_data[u - 1]['username'])
                         di = {'task': t, 'completed': tasks.get('completed'),

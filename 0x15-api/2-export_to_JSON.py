@@ -8,13 +8,12 @@ import sys
 if __name__ == "__main__":
         user = requests.get('https://jsonplaceholder.typicode.com/users?id={}'.
                             format(sys.argv[1]))
-        text = 'https://jsonplaceholder.typicode.com/todos?userId={}'.
-        format(sys.argv[1])
+        u = "{}".format(sys.argv[1])
+        text = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(u)
         t = requests.get(text)
         user_data = user.json()
         tasks_data = t.json()
-        filename = '{}.json'.format(sys.argv[1])
-        uid = "{}".format(sys.argv[1])
+        filename = '{}.json'.format(u)
         lista = []
         for tasks in tasks_data:
                 task = '{}'.format(tasks['title'])
@@ -22,6 +21,6 @@ if __name__ == "__main__":
                 di = {'task': task, 'completed': tasks['completed'],
                       'username': username}
                 lista.append(di)
-        dic = {uid: lista}
+        dic = {u: lista}
         with open(filename, 'w+', encoding='utf-8') as f:
                 json.dump(dic, f)

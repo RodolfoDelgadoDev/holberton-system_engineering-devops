@@ -8,7 +8,6 @@ import sys
 if __name__ == "__main__":
         user = requests.get('https://jsonplaceholder.typicode.com/users')
         user_data = user.json()
-        lista = []
         dic = {}
         for user in user_data:
                 u = user['id']
@@ -17,6 +16,7 @@ if __name__ == "__main__":
                 te = requests.get(tex)
                 tasks_data = te.json()
                 for tasks in tasks_data:
+                        lista = []
                         t = '{}'.format(tasks.get('title'))
                         username = '{}'.format(user_data[u - 1]['username'])
                         di = {'task': t, 'completed': tasks.get('completed'),

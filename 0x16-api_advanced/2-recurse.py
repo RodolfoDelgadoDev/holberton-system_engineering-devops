@@ -16,7 +16,7 @@ def rec(subreddit, url, di, l, hot_list, i):
                 l = di['data']['children']
                 i = 0
                 return rec(subreddit, url, di, l, hot_list, i)
-        elif di['data']['after'] is None:
+        elif i == len(l) and di['data']['after'] is None:
                 return hot_list
         else:
             hot_list.append(l[i]['data']['title'])

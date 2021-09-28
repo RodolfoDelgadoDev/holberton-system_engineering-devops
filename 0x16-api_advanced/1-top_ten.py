@@ -14,7 +14,7 @@ def top_ten(subreddit):
     if r.status_code == 200:
         di = r.json()
         for i in di['data']['children']:
-            if pichu == 10:
+            if pichu == 11:
                 break
             else:
                 print(i['data']['title'])
